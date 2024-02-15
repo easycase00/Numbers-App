@@ -6,15 +6,17 @@
         <title>Arithmetic</title>
     </head>
     <body>
-        <script>
-            async function add(){
-                let num1 = parseInt(document.getElementById("num1").value);
-                let num2 = parseInt(document.getElementById("num2").value);
-                const response = await fetch('https://se-3.onrender.com' + num1 + '/' + num2);
-                const sum = await response.json();
-                document.getElementById("sum").innerHTML = sum;    
-            }
-        </script>
+    <script>
+        async function add () {
+            const operand1Input = document.getElementById("operand1" ) ;
+            const operand2Input = document-getElementById ("operand2" ) ;
+            let num1 = operand1Input.value;
+            let num2 = operand2Input.value;
+            const response = await fetch ("https://se-3.onrender.com//add/" + num1 + "/" + num2) :
+            const sum = await response.json();
+            document.getElementById ("sum"'). innerText = sum;
+        }
+    </script>
         <section>
             <h2>Arithmetic</h2>
             <input id="num1" placeholder="Enter First Number">
