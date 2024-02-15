@@ -7,10 +7,10 @@
     </head>
     <body>
         <script>
-            async function getSum(){
+            async function add(){
                 let num1 = parseInt(document.getElementById("num1").value);
                 let num2 = parseInt(document.getElementById("num2").value);
-                const response = await fetch('http://localhost:3000/add/' + num1 + '/' + num2);
+                const response = await fetch('https://se-3.onrender.com' + num1 + '/' + num2);
                 const sum = await response.json();
                 document.getElementById("sum").innerHTML = sum;    
             }
@@ -20,7 +20,7 @@
             <input id="num1" placeholder="Enter First Number">
             <label>+</label>
             <input id="num2" placeholder="Enter Second Number">
-            <button onclick="getSum()">=</button>
+            <button onclick="add()">=</button>
             <span id="sum"></span>
         </section>
     </body>
