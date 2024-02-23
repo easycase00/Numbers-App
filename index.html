@@ -49,6 +49,8 @@
             const operand2Input = document.getElementById("operand2");
             let n = operand1Input.value;
             let m = operand2Input.value;
+            let expression=operand1Input.value+"+"+operand2Input.value
+            console.log(expression)
             const response = await fetch("https://se-3.onrender.com/calculate/" +expression);
             const sum = await response.json();
             document.getElementById("sum").innerText = sum;
