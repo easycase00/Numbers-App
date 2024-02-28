@@ -41,7 +41,16 @@
             </section>           
         </div>       
      </div>
-    
+     <div class="column">
+        <section>
+            <h2>Caesar cipher</h2>                
+            <label>Text: </label>
+            <input id="numberToTest"/>
+            <button onclick="isPrime()">Cipher</button>
+            <label id="primeCheckResult"></label>  
+        </section>           
+    </div>       
+ </div>
    
     <script>
         async function add() {
@@ -63,6 +72,8 @@
             const result = await response.json();
             document.getElementById("primeCheckResult").innerText = result;
         }
+
+
     </script>
 </body>
 </html>
