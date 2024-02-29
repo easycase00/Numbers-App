@@ -75,7 +75,7 @@
             const textToEncode = document.getElementById("textToEncode");
             let plaintext = textToEncode.value;
 
-            const response = await fetch(`https://ciphers-service-latest-khf5.onrender.com/cipherscaesar/${plaintext}/3`, {
+            const response = await fetch(`https://ciphers-service-latest-khf5.onrender.com/ciphers/caesar/${plaintext}/3`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
