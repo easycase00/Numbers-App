@@ -31,7 +31,7 @@
             <label id="sum"></label>  
         </section>
         </div>
-        <div class="column">
+        <!-- <div class="column">
             <section>
                 <h2>Prime check</h2>                
                 <label>Number to test:</label>
@@ -39,16 +39,15 @@
                 <button onclick="isPrime()">Check</button>
                 <label id="primeCheckResult"></label>  
             </section>           
-        </div>
-        <!--- Hello! --->
+        </div>    --->
      </div>
      <div class="column">
         <section>
             <h2>Caesar cipher</h2>                
             <label>Text: </label>
-            <input id="textToEncode" type="text" placeholder="Enter text to encode">
-            <button class="button" onclick="encode()">Encode</button>
-            <p id="encodedText"></p>
+            <input id="numberToTest"/>
+            <button onclick="isPrime()">Cipher</button>
+            <label id="primeCheckResult"></label>  
         </section>           
     </div>       
  </div>
@@ -74,29 +73,7 @@
             document.getElementById("primeCheckResult").innerText = result;
         }
 
-        <script>
-            async function encode() {
-            const textToEncode = document.getElementById("textToEncode");
-            let text = textToEncode.value;
 
-            const url = new URL("https://cipher-xh27.onrender.com/cipher/caesar/${text}/3");
-
-            console.log(url);
-            const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-            'Content-Type': 'application/json'
-        }
-        });
-
-            if (!response.ok) {
-            alert('HTTP-Error: ' + response.status);
-            return;
-        }
-            console.log(response);
-
-            const data = await response.json();
-            document.getElementById("encodedText").innerText = data.encodedText;
     </script>
 </body>
 </html>
